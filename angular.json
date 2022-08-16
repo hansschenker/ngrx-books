@@ -62,12 +62,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+
           "configurations": {
             "production": {
-              "browserTarget": "books:build:production"
+              "browserTarget": "books:build:production",
+              "proxyConfig": "proxy.conf.json"
             },
             "development": {
-              "browserTarget": "books:build:development"
+              "browserTarget": "books:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -97,5 +100,9 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "fb755a0e-52f5-49ba-bbcb-713b5ced8359",
+    "defaultCollection": "@ngrx/schematics"
   }
 }
